@@ -6,8 +6,6 @@ Summary view of your twitter timeline, which will show only metadata (title, ima
 
 The idea is that you won't miss the interesting stuff shared on your timeline if you don't read twitter for a couple of days. Besides, it will be faster to go through your timeline because you won't have to click on the links that don't look interesting, based on the preview.
 
-If you like 404 pages, check out http://catchup.r12.railsrumble.com/wat featuring my 'soon to be' iPhone sleeve...
-
 ## Technologies
 
 The technology stack used in this project is devided in sections and described below.
@@ -40,9 +38,9 @@ I used [twitter bootstrap's](http://twitter.github.com/bootstrap/) libraries.
 
 There are a number of APIs/gems being used:
 
+- [Diffbot's](http://www.diffbot.com) API, which allows content extraction from webpages.
 - The [twitter](https://dev.twitter.com/docs) API and the [gem](https://github.com/sferik/twitter);
-- [Pismo's](https://github.com/peterc/pismo) gem, which allows content extraction from webpages;
-- [Diffbot's](http://www.diffbot.com) API (Free tier).
+- [Pismo's](https://github.com/peterc/pismo) gem, which also allows content extraction from webpages;
 
 Check the `Gemfile` for more information about which gems are being used.
 
