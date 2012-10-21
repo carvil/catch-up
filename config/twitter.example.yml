@@ -1,0 +1,17 @@
+development:
+  key: example_key
+  secret: example_secret
+  access_token: example_token
+  access_token_secret: example_secret_token
+
+test:
+  key: example_key
+  secret: example_secret
+  access_token: example_token
+  access_token_secret: example_secret_token
+
+production:
+  key: example_key
+  secret: example_secret
+  access_token: example_token
+  access_token_secret: example_secret_token

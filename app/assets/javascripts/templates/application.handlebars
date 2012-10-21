@@ -1,0 +1,87 @@
+<div class="navbar">
+  <div class="navbar-inner">
+    <div class="container">
+      <a href="/" class="brand">Catch Up - <i>your twitter reading list</i></a>
+      <ul class="nav pull-right">
+        {{#if isLoggedIn}}
+          <li><a {{bindAttr href="signout"}}>Sign out, {{current_user.screen_name}}</a></li>
+        {{else}}
+          <li><a {{bindAttr href="signin"}}>Sign in with Twitter</a></li>
+        {{/if}}
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+{{#if isLoggedIn}}
+  {{#unless isReady}}
+
+    <div class="jumbotron masthead">
+      <div class="container">
+        <h1>Thanks for signing up!</h1>
+        <br/>
+        <div class="marketing">
+          <p class="marketing-byline">We are currently processing your twitter timeline and will be ready in a few minutes.</p>
+          <p class="marketing-byline">If you would like to get a DM you when we are done, follow me <a href="https://twitter.com/carvil_" target="_blank">here</a>!</p>
+        </div>
+        <p><img class="sign-in" src="/assets/work_in_progress2.png"/></p>
+      </div>
+    </div>
+  {{/unless}}
+{{else}}
+  <div class="jumbotron masthead">
+    <div class="container">
+      <h1>Catch Up</h1>
+      <br/>
+      <div class="marketing">
+        <p class="marketing-byline">Don't miss the best links shared with you on twitter.</p>
+        <p class="marketing-byline">Start tracking your timeline today! We will fetch metadata for each link and show you a preview.</p>
+        <p class="marketing-byline">Sign in with your twitter account for free</p>
+      </div>
+      <p><a {{bindAttr href="signin"}}><img class="sign-in" src="/assets/twitter-bird-white-on-blue.png"></a></p>
+    </div>
+  </div>
+{{/if}}
+
+
+{{outlet}}
+
+
+{{#unless isLoggedIn}}
+  <div class="row">
+    <div class="span6 offset3">
+      <div class="marketing">
+        <p class="marketing-byline">Did you like it? Go ahead and vote <a href="http://railsrumble.com/entries/33-nan" target="_blank">here</a></p>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="bs-docs-social">
+      <div class="container">
+        <ul class="bs-docs-social-buttons">
+          <li class="follow-btn">
+            <iframe allowtransparency="true" frameborder="0" scrolling="no" src="http://platform.twitter.com/widgets/follow_button.1347008535.html#_=1350219573463&amp;id=twitter-widget-1&amp;lang=en&amp;screen_name=carvil_&amp;show_count=true&amp;show_screen_name=true&amp;size=m" class="twitter-follow-button" style="width: 236px; height: 20px; " title="Twitter Follow Button" data-twttr-rendered="true"></iframe>
+          </li>
+          <li class="tweet-btn">
+            <iframe allowtransparency="true" frameborder="0" scrolling="no" src="http://platform.twitter.com/widgets/tweet_button.1347008535.html#_=1350219573436&amp;count=horizontal&amp;id=twitter-widget-0&amp;lang=en&amp;original_referer=http%3A%2F%2Ftwitter.github.com%2Fbootstrap%2Findex.html&amp;related=mdo%3ACreator%20of%20Catch%20Up&amp;size=m&amp;text=Check%20out%20Catch%20Up&amp;url=http%3A%2F%2Fcatchup.r12.railsrumble.com&amp;via=carvil_" class="twitter-share-button twitter-count-horizontal" style="width: 107px; height: 20px; " title="Twitter Tweet Button" data-twttr-rendered="true"></iframe>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+{{/unless}}
+</div>
+
+<footer class="footer">
+<div class="container">
+  <p class="pull-right"><a href="#">Back to top</a></p>
+  <p>Designed and built by <a href="http://twitter.com/twitter" target="_blank">@carvil_</a></p>
+  <p>Technology choices described in the <a href="http://railsrumble.com/entries/33-nan" target="_blank">railsrumble</a> page.</a></p>
+  <ul class="footer-links">
+    <li><a href="http://railsrumble.com/entries/33-nan">Rails Rumble team page</a></li>
+    <li><a href="http://carvil.github.com">My blog</a></li>
+  </ul>
+</div>
+</footer>
