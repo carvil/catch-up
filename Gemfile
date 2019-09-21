@@ -6,7 +6,7 @@ gem 'ember-rails', git: 'git://github.com/emberjs/ember-rails.git'
 gem 'turbo-sprockets-rails3'
 gem 'ripple', git: "git://github.com/basho/ripple.git"
 gem "riak-client", "~> 1.0.5"
-gem "jquery-rails", "1.0.19"
+gem "jquery-rails", "3.1.5"
 gem 'omniauth-twitter'
 gem "redis-rails", "~> 3.2.3"
 gem "resque", git: "git@github.com:carvil/resque.git"
