@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.8'
+gem 'rails', '3.2.22.5'
 gem 'sqlite3'
 gem 'ember-rails', git: 'git://github.com/emberjs/ember-rails.git'
 gem 'turbo-sprockets-rails3'
